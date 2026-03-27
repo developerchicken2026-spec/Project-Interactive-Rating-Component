@@ -1,0 +1,171 @@
+/* 1. Import Font Overpass từ Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+/* 2. Thiết lập biến màu (CSS Variables) */
+:root {
+  /* Primary */
+  --orange: hsl(25, 97%, 53%);
+
+  /* Neutral */
+  --white: hsl(0, 100%, 100%);
+  --grey-500: hsl(217, 12%, 63%);
+  --grey-900: hsl(213, 19%, 18%);
+  --grey-950: hsl(216, 12%, 8%);
+
+  /* Font size */
+  --fs-body: 15px;
+}
+
+/* 3. Reset cơ bản để giao diện nhất quán */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: var(--fs-body);
+  background-color: var(--grey-950); /* Màu nền tối nhất */
+  color: var(--white);
+
+  /* Căn giữa cái card ra giữa màn hình cho đẹp */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 1.5rem;
+}
+
+#container-rating {
+  background-color: var(--grey-900);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 90%;
+  border-radius: 1rem;
+}
+
+.container-img {
+  width: 8%;
+  background-color: var(--grey-950);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.container-h1 {
+  font-size: 1.5rem;
+}
+
+.container-p {
+  font-size: 0.9.rem;
+  color: var(--grey-500);
+  line-height: 1.5rem;
+}
+
+.container-btn-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-btn-rating > button {
+  padding: 1rem;
+  margin: 0.55rem;
+  border-radius: 50%;
+  border: none;
+  width: 45px;
+  height: 45px;
+  background-color: hsl(213, 25%, 25%);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.container-btn {
+  background-color: var(--orange);
+  padding: 0.9rem;
+  border-radius: 2rem;
+  border: none;
+  max-width: 100%;
+  margin: 0 0.76rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+#container-tks {
+  background-color: var(--grey-900);
+  margin-top: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  border-radius: 1rem;
+  display: none;
+  width: 90%;
+}
+
+.container-img-tks {
+  width: 50%;
+}
+
+.container-p-tks {
+  background-color: hsl(213, 19%, 25%);
+  padding: 0.6rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--orange);
+  opacity: 0.9;
+}
+
+.container-h2-tks {
+  font-size: 1.5rem;
+}
+
+.container-p1-tks {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: var(--grey-500);
+}
+
+.container-btn-rating > button:hover {
+  background-color: var(--grey-500);
+}
+
+.container-btn:hover {
+  background-color: hsl(25, 100%, 36%);
+}
+
+.container-btn-rating button.active {
+  background-color: var(--white);
+  color: var(--grey-950);
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: 1440px;
+  }
+
+  #container-rating {
+    max-width: 400px;
+  }
+
+  #container-tks {
+    max-width: 400px;
+  }
+}
